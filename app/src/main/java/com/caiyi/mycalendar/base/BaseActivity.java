@@ -1,4 +1,4 @@
-package com.caiyi.mycalendar.compant;
+package com.caiyi.mycalendar.base;
 
 /**
  * @since 2015/12/21.
@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.caiyi.mycalendar.R;
 import com.caiyi.mycalendar.Utils.NetworkUtil;
 import com.caiyi.mycalendar.Utils.StringUtil;
+import com.caiyi.mycalendar.compant.AroundServiceActivity;
 import com.caiyi.mycalendar.log.Logger;
 
 import java.util.LinkedList;
@@ -36,11 +37,7 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     private boolean mIsDestroyed = false;
     /** progressdialog.*/
     private Dialog mProgressDialog;
-    /** 页面标题参数. */
-    public static final String PARAM_PAGE_TITLE = "PARAM_PAGE_TITLE";
-    /** tag */
-    private static final String TAG = "BaseActivity";
-    
+
     protected Activity mActivity;
     protected Context mContext;
 

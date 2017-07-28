@@ -7,6 +7,7 @@ import android.widget.ListView;
 import com.caiyi.mycalendar.R;
 import com.caiyi.mycalendar.adapter.AroundServiceAdapter;
 import com.caiyi.mycalendar.apiService.ServeApiService;
+import com.caiyi.mycalendar.base.BaseActivity;
 import com.caiyi.mycalendar.model.DetailServeModel;
 import com.caiyi.mycalendar.retrofit.ApiServiceFactory;
 import com.caiyi.mycalendar.retrofit.model.HttpResults;
@@ -14,7 +15,7 @@ import com.caiyi.mycalendar.retrofit.subscriber.HttpResultsObserver;
 import com.caiyi.mycalendar.rx.RxUtil;
 
 
-public class AroundServiceActivity extends BaseActivity{
+public class AroundServiceActivity extends BaseActivity {
 
     /** 显示图片列表 */
     private ListView mListContainer;

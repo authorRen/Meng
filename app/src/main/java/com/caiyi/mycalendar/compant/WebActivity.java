@@ -27,6 +27,7 @@ import android.widget.ProgressBar;
 
 import com.caiyi.mycalendar.R;
 import com.caiyi.mycalendar.Utils.StringUtil;
+import com.caiyi.mycalendar.base.BaseActivity;
 import com.caiyi.mycalendar.log.Logger;
 
 /**
