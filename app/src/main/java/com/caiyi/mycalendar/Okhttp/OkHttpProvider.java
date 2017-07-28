@@ -2,6 +2,7 @@ package com.caiyi.mycalendar.Okhttp;
 
 
 import com.caiyi.mycalendar.BuildConfig;
+import com.caiyi.mycalendar.R;
 import com.caiyi.mycalendar.compant.MyApplication;
 import com.caiyi.mycalendar.Utils.StringUtil;
 
@@ -48,6 +49,8 @@ public class OkHttpProvider {
             builder.addInterceptor(new LoggerInterceptor());
         }
 
+        HttpsUtil.SSLParams sslParams = HttpsUtil.getSslSocketFactory(MyApplication.getAppContext().getResources().openRawResource(R.raw.andgjj));
+        builder.sslSocketFactory(sslParams.sSLSocketFactory, sslParams.trustManager);
         mOkHttpClient = builder.build();
     }
 
