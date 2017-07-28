@@ -1,5 +1,7 @@
 package com.caiyi.mycalendar.Okhttp;
 
+
+import com.caiyi.mycalendar.BuildConfig;
 import com.caiyi.mycalendar.compant.MyApplication;
 import com.caiyi.mycalendar.Utils.StringUtil;
 
@@ -42,7 +44,7 @@ public class OkHttpProvider {
                 .cache(new Cache(createDir(MyApplication.getAppContext().getCacheDir() + "/okhttp"), 10 * 1024 * 1024L));
 
         builder.addInterceptor(new CommonInterceptor());
-        if (true) {
+        if (BuildConfig.LOG_DEBUG) {
             builder.addInterceptor(new LoggerInterceptor());
         }
 
