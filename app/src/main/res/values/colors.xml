@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#8BC34A</color>
+    <color name="secondary">#727272</color>
+    <!-- 公共颜色 -->
+    <color name="semi_transparent">#8f000000</color>
+    <color name="gjj_page_bg">#FFF3F7F9</color>
+    <color name="colorPrimary">#FFF3F7F9</color>
+    <color name="colorPrimaryDark">#FF0A6BA2</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gjj_transparent">#00000000</color>
+    <color name="gjj_white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="gjj_divider_color">#e5e7e8</color>
+    <color name="gjj_divider_color_2">#f0f0f0</color>
+    <color name="gjj_divider_color_3">#99ebebeb</color>
+    <color name="gjj_divider_color_4">#ebebeb</color>
+    <color name="gjj_list_pressed_color">#40ebebeb</color>
+    <color name="gjj_def_bg">#fff3f7f9</color>
+    <color name="gjj_def_bg_2">#fff5f5f5</color>
+    <color name="gjj_def_bg_3">#fff9f9f9</color>
+    <color name="gjj_def_bg_4">#fffafafa</color>
+    <color name="gjj_top_bg">#ff27a5e2</color>
+    <color name="gjj_top_txt">#FFD7ECF6</color>
+
+    <!-- switchTitle -->
+    <color name="gjjSwitchTitleLine">#ff27A5E2</color>
+    <color name="gjjSwitchTitleTxtActive">#ff27A5E2</color>
+    <color name="gjjSwitchTitleTxtDisable">#ffb0b0b0</color>
+
+    <!-- 页面顶部栏 -->
+    <color name="gjj_common_header_bg">#ffea5559</color>
+    <color name="gjj_common_header_pressbg">#1e000000</color>
+
+    <color name="gjj_loading_progress_color_1">#1aa48c</color>
+    <color name="gjj_loading_progress_color_2">#f44e4a</color>
+    <color name="gjj_loading_progress_color_3">#f8af1a</color>
+    <color name="gjj_forum_search_bg">#f8f8f8</color>
+    <color name="gjj_forum_search_text_color">#aeaeae</color>
+
+    <!-- 用户中心 -->
+    <color name="gjj_user_center_second_color">#9a9c9e</color>
+    <color name="gjj_about_desc_color">#ff777777</color>
+    <color name="gjj_user_center_msg_username_color">#757575</color>
+
+    <!-- 登陆注册 -->
+    <color name="gjj_login_desc_color">#bdc0c2</color>
+    <color name="gjj_login_sendcode_disabled_color">#c6ccd0</color>
+    <color name="gjj_login_submit_disabled_color">#bdc0c2</color>
+
+    <!-- 照片选择框 -->
+    <color name="gjj_photo_choose_dialog_title_color">#ff1aa48c</color>
+
+    <!-- 提取指南 -->
+    <color name="gjj_extract_guide_second_color">#b8babc</color>
+
+    <!--进度条颜色-->
+    <integer-array name="gjj_loading_colors">
+        <item>@color/gjj_loading_progress_color_1</item>
+        <item>@color/gjj_loading_progress_color_2</item>
+        <item>@color/gjj_loading_progress_color_3</item>
+    </integer-array>
+    <color name="gjj_progressbar_color_1">#29b6f6</color>
+    <color name="gjj_progressbar_color_2">#26a69a</color>
+    <color name="gjj_progressbar_color_3">#febe36</color>
+    <color name="gjj_progressbar_color_4">#ff9100</color>
+    <integer-array name="gjj_progressbar_colors">
+        <item>@color/gjj_progressbar_color_1</item>
+        <item>@color/gjj_progressbar_color_2</item>
+        <item>@color/gjj_progressbar_color_3</item>
+        <item>@color/gjj_progressbar_color_4</item>
+    </integer-array>
+
+    <!-- 文字颜色 -->
+    <color name="gjj_text_primary">#ff363f46</color>
+    <color name="gjj_text_second">#ffa3a6a8</color>
+    <color name="gjj_text_second_2">#616161</color>
+    <color name="gjj_text_second_3">#717171</color>
+    <color name="gjj_text_blue">#ff57a5e2</color>
+    <color name="gjj_text_blue_2">#ff27a5e2</color>
+    <color name="gjj_text_blue_3">#ff4d9ef9</color>
+    <color name="gjj_text_deep_blue">#ff277ae2</color>
+    <color name="gjj_text_green">#ff2ecc71</color>
+    <color name="gjj_text_cyanblue">#ff94be24</color>
+    <color name="gjj_text_brown">#fff77e44</color>
+    <color name="gjj_text_yellow">#fffcff17</color>
+    <color name="gjj_text_yellow_2">#ff8bc79d</color>
+    <color name="gjj_text_orange">#ff5a20</color>
+    <color name="gjj_text_desc">#808080</color>
+    <color name="gjj_text_desc_2">#888888</color>
+    <color name="gjj_text_amount_red">#e42e48</color>
+    <color name="gjj_text_amount_yellow">#ffb022</color>
+    <color name="gjj_text_amount_red_2">#fffc6821</color>
+    <color name="gjj_text_amount_blue">#ff62acfe</color>
+    <color name="gjj_text_comment_name">#ff707070</color>
+    <color name="gjj_text_comment">#ff616161</color>
+    <color name="gjj_text_comment_second">#ff828282</color>
+    <color name="gjj_text_news_policy">#333432</color>
+    <!-- 分割线颜色 -->
+    <color name="gjj_divider">#ffd5d8d9</color>
+    <color name="gjj_red">#ffea667f</color>
+    <color name="gjj_item_txt">#FFA3A6A8</color>
+    <color name="gjj_item_title">#FF8D9092</color>
+
+    <color name="gjj_city_color">#FF27A5E2</color>
+    <color name="gjj_city_chose_color">#FF363F46</color>
+    <color name="gjj_city_hint_color">#FFA3A6A8</color>
+    <color name="gjj_city_support_color">#FF363F46</color>
+    <color name="gjj_login_help_color">#FF1D9CF5</color>
+    <color name="gjj_login_type_color">#FF9E9E9E</color>
+    <color name="gjj_login_border">#FFE2E6E7</color>
+
+    <color name="gjj_dialog_bg">#FF337BFE</color>
+    <color name="gjj_account_select_balance">#FFFFF843</color>
+    <color name="gjj_account_balance">#ff6d0d</color>
+    <color name="gjj_account_username">#FF212121</color>
+    <color name="gjj_account_normal">#7e7e7e</color>
+    <color name="gjj_edit_bg">#FFC2C2C2</color>
+    <color name="gjj_forget_pwd">#FFF68D27</color>
+    <color name="gjj_emoji_color">#ffebeced</color>
+
+    <color name="green_2ebb2f">#2ebb2f</color>
+    <color name="green_89e18a">#89e18a</color>
+    <color name="white_dedede">#dedede</color>
+    <color name="light_white">#99ffffff</color>
+    <color name="white_fcfeff">#fcfeff</color>
+    <color name="white_a3a6a8">#a3a6a8</color>
+    <color name="white_dddddd">#dddddd</color>
+    <color name="item_normal">#f3f7f9</color>
+    <color name="item_pressed">#f0f0f0</color>
+
+    <color name="black_373737">#373737</color>
+    <color name="black_2c2c2c">#2c2c2c</color>
+    <color name="black_333333">#333333</color>
+    <color name="black_1d1d1d">#1d1d1d</color>
+    <color name="black_212121">#212121</color>
+    <color name="black_6c6c6c">#6c6c6c</color>
+
+    <color name="gray_767676">#767676</color>
+    <color name="gray_777777">#777777</color>
+    <color name="gray_b9b9b9">#b9b9b9</color>
+    <color name="gray_f6f6f6">#f6f6f6</color>
+    <color name="gray_f5f5f5">#f5f5f5</color>
+    <color name="gray_fbfbfb">#fbfbfb</color>
+    <color name="gray_cccccc">#cccccc</color>
+    <color name="gray_5b5b5b">#5b5b5b</color>
+    <color name="gray_939393">#939393</color>
+    <color name="gray_a5a5a5">#a5a5a5</color>
+    <color name="gray_f0f0f0">#f0f0f0</color>
+    <color name="gray_666666">#666666</color>
+    <color name="gray_fea1a6b4">#fea1a6b4</color>
+    <color name="gray_e0e0e0">#e0e0e0</color>
+
+    <color name="blue_509dfc">#509dfc</color>
+    <color name="blue_e9f7fe">#e9f7fe</color>
+    <color name="blue_78b7ff">#ff78b7ff</color>
+    <color name="blue_3591fc">#3591fc</color>
+    <color name="blue_193591fc">#193591fc</color>
+    <color name="blue_5b96f1">#5b96f1</color>
+    <color name="blue_5653db">#5653db</color>
+    <color name="blue_5bacf5">#ff5bacf5</color>
+    <color name="blue_333841">#333841</color>
+    <color name="blue_499cfc">#499cfc</color>
+
+    <color name="purple_6e7af9">#6e7af9</color>
+
+    <color name="yellow_ffbc2f">#ffbc2f</color>
+    <color name="yellow_fc9d42">#fc9d42</color>
+    <color name="yellow_fef7db">#fef7db</color>
+    <color name="yellow_ffb022">#ffb022</color>
+
+    <color name="red_dd4649">#dd4649</color>
+
+    <color name="btn_disabled_text_color">#bdc0c2</color>
+
+    <color name="forum_publsih_bg">#78b7ff</color>
+
+    <!--车险-->
+    <!-- 饼图 -->
+    <integer-array name="pie_area_colors">
+        <item>@color/pie_area_color_1</item>
+        <item>@color/pie_area_color_2</item>
+    </integer-array>
+    <color name="pie_area_color_1">#5b96f1</color>
+    <color name="pie_area_color_2">#fe9d35</color>
+
+    <color name="cx_common_desc_color">#7b7b7b</color>
+    <color name="cx_common_divider_color">#ffebebeb</color>
+    <color name="common_radio_gray_border_color">#cfcfcf</color>
+    <color name="common_transparent">#00ffffff</color>
+</resources>
