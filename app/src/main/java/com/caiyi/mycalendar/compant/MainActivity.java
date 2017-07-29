@@ -13,7 +13,7 @@ import butterknife.Unbinder;
  * @author Ren ZeQiang
  * @since 2017/7/28
  */
-public class MianActivity extends BaseActivity {
+public class MainActivity extends BaseActivity {
 
     private Unbinder unbinder;
 
