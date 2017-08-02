@@ -18,34 +18,20 @@ import com.caiyi.mycalendar.fragment.UserCenterFragment;
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.ButterKnife;
-import butterknife.Unbinder;
-
 /**
  * @author Ren ZeQiang
  * @since 2017/7/28
  */
 public class MainActivity extends BaseActivity {
 
-    private Unbinder unbinder;
     private ViewPager mViewPager;
 
-//    @BindView(R.id.tv_home)
     private TextView mHomeTextView;
-//    @BindView(R.id.tv_second)
     private TextView mSecondTextView;
-//    @BindView(R.id.tv_third)
     private TextView mThirdTextView;
-//    @BindView(R.id.tv_userCenter)
     private TextView mUserCenterTextView;
 
-    private HomeFragment homeFragment;
-    private SecondFragment secondFragment;
-    private ThirdFragment thirdFragment;
-    private UserCenterFragment usercenterFragment;
-
     private List<Fragment> fragments = new ArrayList<>();
-    private FragmentManager manager;
 
     private MyViewAdapter adapter;
 
@@ -57,7 +43,6 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        unbinder = ButterKnife.bind(this);
 
         initView();
 
@@ -158,11 +143,4 @@ public class MainActivity extends BaseActivity {
         }
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        if (unbinder != null) {
-            unbinder.unbind();
-        }
-    }
 }
