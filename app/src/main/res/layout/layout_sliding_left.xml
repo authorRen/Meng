@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/menu_layout_left"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="@drawable/sliding_bg">
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/sliding_sdv_myPhoto"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:roundAsCircle="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"/>
+
+    <TextView
+        android:text="阿泽"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/sliding_sdv_myPhoto"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/sliding_sdv_myPhoto"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_online_service"
+            style="@style/slidingItemStyle"
+            android:drawableLeft="@drawable/icon_online_service"
+            android:text="问题帮助"/>
+
+        <TextView
+            android:id="@+id/tv_we_chat"
+            style="@style/slidingItemStyle"
+            android:drawableLeft="@drawable/icon_we_chat"
+            android:text="微信服务号"/>
+
+        <TextView
+            android:id="@+id/tv_share_app"
+            style="@style/slidingItemStyle"
+            android:drawableLeft="@drawable/icon_share_app"
+            android:text="分享APP"/>
+
+        <TextView
+            android:id="@+id/tv_recommendation"
+            style="@style/slidingItemStyle"
+            android:drawableLeft="@drawable/icon_recommendation"
+            android:text="精品推荐"/>
+
+        <TextView
+            android:id="@+id/tv_user_center_more"
+            style="@style/slidingItemStyle"
+            android:drawableLeft="@drawable/icon_user_center_more"
+            android:text="更多"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/sliding_tv_setting"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="设置"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/sliding_tv_dayNight"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="夜间"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="定位"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+</RelativeLayout>

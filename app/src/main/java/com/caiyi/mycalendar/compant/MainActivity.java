@@ -1,19 +1,25 @@
 package com.caiyi.mycalendar.compant;
 
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.caiyi.mycalendar.R;
+import com.caiyi.mycalendar.Utils.GlobalConstants;
 import com.caiyi.mycalendar.base.BaseActivity;
 import com.caiyi.mycalendar.fragment.HomeFragment;
 import com.caiyi.mycalendar.fragment.SecondFragment;
 import com.caiyi.mycalendar.fragment.ThirdFragment;
 import com.caiyi.mycalendar.fragment.UserCenterFragment;
+import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,6 +29,10 @@ import java.util.List;
  * @since 2017/7/28
  */
 public class MainActivity extends BaseActivity {
+    /** DrawerLayout容器 */
+    public static DrawerLayout mDrawerLayout;
+
+    private SimpleDraweeView mSlidingImage;
 
     private ViewPager mViewPager;
 
@@ -34,7 +44,6 @@ public class MainActivity extends BaseActivity {
     private List<Fragment> fragments = new ArrayList<>();
 
     private MyViewAdapter adapter;
-
     TextView[] tabs = new TextView[4];
 
 
@@ -46,9 +55,12 @@ public class MainActivity extends BaseActivity {
 
         initView();
 
+        initSlidingView();
+
         initData();
 
-        setViewClickListeners(R.id.tv_home, R.id.tv_second, R.id.tv_third, R.id.tv_userCenter);
+        setViewClickListeners(R.id.tv_home, R.id.tv_second, R.id.tv_third, R.id.tv_userCenter,
+                R.id.sliding_tv_dayNight, R.id.sliding_tv_setting);
     }
 
     private void initView() {
@@ -82,6 +94,14 @@ public class MainActivity extends BaseActivity {
 
     }
 
+    private void initSlidingView() {
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        mSlidingImage = (SimpleDraweeView) findViewById(R.id.sliding_sdv_myPhoto);
+        mSlidingImage.setImageURI(Uri.parse(GlobalConstants.GLOBAL_URL.PHOTO_URL));
+
+    }
+
     private void initData() {
         fragments.add(new HomeFragment());
         fragments.add(new SecondFragment());
@@ -106,6 +126,12 @@ public class MainActivity extends BaseActivity {
                 break;
             case R.id.tv_userCenter:
                 changeStatus(3);
+                break;
+            case R.id.sliding_tv_setting:
+                mDrawerLayout.closeDrawer(Gravity.LEFT);
+                mViewPager.setCurrentItem(3);
+                break;
+            case R.id.sliding_tv_dayNight:
                 break;
             default:
                 break;

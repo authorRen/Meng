@@ -21,49 +21,8 @@ public class GlobalConstants {
     public @interface BusinessType {
     }
 
-    /** 养老保险 */
-    public static final int ENDOWMENT = 1;
-    /** 医疗保险 */
-    public static final int MEDICAL = 2;
-    /** 失业保险 */
-    public static final int UNEMPLOYMENT = 3;
-    /** 生育保险 */
-    public static final int MATERNITY = 4;
-    /** 工伤保险 */
-    public static final int WORK_INJURY = 5;
-    @IntDef({ENDOWMENT, MEDICAL, UNEMPLOYMENT, MATERNITY, WORK_INJURY})
-    @Retention(RetentionPolicy.SOURCE)
-    public @interface SS {
-    }
 
-    public interface HTTP_RESPONSE_CODE {
-        /** 请求范围不符合要求 */
-        int NON_CONFORMANCE = 416;
-        /** 文件未修改 */
-        int UNMODIFIED = 304;
-        /** 部分内容 */
-        int PARTIAL_CONTENT = 206;
-    }
 
-    public interface INTENT_PARAMS_KEY {
-        /** 通过接口跳转本地需要的参数 */
-        String API_PARAMS = "API_PARAMS";
-        
-        String CITY_CODE = "CITY_CODE";
-        String GJJ_LOC_NAME = "GJJ_LOC_NAME";
-        String APP_DOWNLOAD_UPDATE = "APP_DOWNLOAD_UPDATE";
-        String CITY_LIST = "CITY_LIST";
-        String CITY_SELECT = "CITY_SELECT";
-        String CITY_SEARCH_FROM = "CITY_SEARCH_FROM";
-        String REFRESH = "REFRESH";
-        String GJJ_REMIND = "GJJ_REMIND";
-    }
-
-    //在线客服使用标志.0:websocket;1:友盟
-    public interface OnlineServiceType {
-        int SERVICE_SOCKET = 0;
-        int SERVICE_UMENG = 1;
-    }
 
     //网络状态
     public interface NETWORK_TYPE {
@@ -77,30 +36,6 @@ public class GlobalConstants {
 
     //SharedPreference的key
     public interface SP_PARAMS_KEY {
-        /** app更新是否下载完成 */
-        String APK_DOWNLOAD_SUCCESS = "APK_DOWNLOAD_SUCCESS";
-        /** app下载的版本号 */
-        String APK_DOWNLOAD_VERSION = "APK_DOWNLOAD_VERSION";
-        //是否显示过刷新账户向导 统计次数，第二次再弹出
-        String REFRESH_ACCOUNT_GUIDE_COUNT = "REFRESH_ACCOUNT_GUIDE_COUNT";
-        /** 社区搜索历史 */
-        String FORUM_SEARCH_HISTORY = "FORUM_SEARCH_HISTORY";
-        /** Splash版本 */
-        String SPLASH_VERSION = "SPLASH_VERSION";
-        /**
-         * 每个手机号的登录形式
-         * {@link com.caiyi.utils.LoginHelper.LoginState LoginState}
-         */
-        String LOGIN_STATE = "LOGIN_STATE";
-
-        /** 登录框,记录每次输入的手机号 */
-        String LOCAL_LOGIN_BOX_PHONE_KEY = "LOCAL_LOGIN_BOX_PHONE_KEY";
-
-        /** 登录成功用户的手机号. */
-        String LOCAL_USER_PHONE_KEY = "LOCAL_USER_PHONE_KEY";
-
-        /** 保存测试域名 */
-        String DOMAIN_FOR_DEBUG = "DOMAIN_FOR_DEBUG";
         
         String PRINT_REQUEST_HEADER = "PRINT_REQUEST_HEADER";
         
@@ -122,26 +57,8 @@ public class GlobalConstants {
 
     }
 
-    //网络缓存的key
-    public interface CACHE_KEY {
-        String SPLASH = "SPLASH";
-        String FORUM_TAGS = "FORUM_TAGS";
-        String HOME_ENTRY = "HOME_ENTRY";
-        String HOME_BANNER = "HOME_BANNER";
-        String HOME_LOAN_CREDIT = "HOME_LOAN_CREDIT";
-        String HOME_NOTICES = "HOME_NOTICES";
-        String ACCOUNT_INFO = "ACCOUNT_INFO";
-        String FORUM_MSG = "FORUM_MSG";
-        String CITY_LIST = "CITY_LIST";
-        String CITY_CODE_LIST = "CITY_CODE_LIST";
-        String SERVICE_POLICY = "SERVICE_POLICY";
-        String SERVICE_AROUND = "SERVICE_AROUND";
-        String SERVICE_ENTRY = "SERVICE_ENTRY";
-        String SERVICE_BANNER = "SERVICE_BANNER";
+    public interface GLOBAL_URL {
+        String PHOTO_URL = "http://img1.touxiang.cn/uploads/20120428/28-051412_566.jpg";
     }
 
-    public interface APP_UPDATE_TYPE {
-        int NON_FORCE = 0;
-        int FORCE = 1;
-    }
 }

@@ -8,11 +8,35 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.Light">
+    <style name="AppTheme.NoActionBar" parent="@style/Theme.AppCompat.DayNight">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+
+    <style name="slidingItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/gjj_text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
+
+    <style name="UserCenterItemStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:background">@drawable/normal_selector</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:drawableRight">@drawable/icon_light_arrow_right</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:textColor">@color/gjj_text_primary</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:drawablePadding">16dp</item>
+        <item name="android:gravity">center_vertical</item>
     </style>
 
 </resources>

@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Meng</string>
     <string name="gjj_network_not_connected">您的网络未连接^_^</string>
+    <string name="gjj_friendly_error_toast">出错啦，休息一下再试^_^</string>
     <string name="circum_service">周边服务</string>
 </resources>
