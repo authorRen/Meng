@@ -52,6 +52,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
     /*butterKnife*/
     compile 'com.jakewharton:butterknife:8.7.0'
+    compile 'com.jakewharton:butterknife-compiler:8.7.0'
     /*okhttp3*/
     compile 'com.squareup.okhttp3:okhttp:3.8.1'
     /*gson*/
@@ -67,5 +68,4 @@ dependencies {
     /*fresco*/
     compile 'com.facebook.fresco:fresco:1.4.0'
     compile 'com.facebook.fresco:imagepipeline-okhttp3:1.4.0'
-
 }

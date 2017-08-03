@@ -9,7 +9,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.caiyi.mycalendar.R;
@@ -17,29 +16,38 @@ import com.caiyi.mycalendar.Utils.GlobalConstants;
 import com.caiyi.mycalendar.base.BaseActivity;
 import com.caiyi.mycalendar.fragment.HomeFragment;
 import com.caiyi.mycalendar.fragment.SecondFragment;
-import com.caiyi.mycalendar.fragment.ThirdFragment;
+import com.caiyi.mycalendar.fragment.GirlFragment;
 import com.caiyi.mycalendar.fragment.UserCenterFragment;
 import com.facebook.drawee.view.SimpleDraweeView;
 
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 /**
  * @author Ren ZeQiang
  * @since 2017/7/28
  */
 public class MainActivity extends BaseActivity {
+    private Unbinder unbinder;
     /** DrawerLayout容器 */
     public static DrawerLayout mDrawerLayout;
+    @BindView(R.id.sliding_sdv_myPhoto)
+    SimpleDraweeView mSlidingImage;
+    @BindView(R.id.viewPager)
+    ViewPager mViewPager;
 
-    private SimpleDraweeView mSlidingImage;
-
-    private ViewPager mViewPager;
-
-    private TextView mHomeTextView;
-    private TextView mSecondTextView;
-    private TextView mThirdTextView;
-    private TextView mUserCenterTextView;
+    @BindView(R.id.tv_home)
+    TextView mHomeTextView;
+    @BindView(R.id.tv_second)
+    TextView mSecondTextView;
+    @BindView(R.id.tv_girl)
+    TextView mThirdTextView;
+    @BindView(R.id.tv_userCenter)
+    TextView mUserCenterTextView;
 
     private List<Fragment> fragments = new ArrayList<>();
 
@@ -52,28 +60,23 @@ public class MainActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        unbinder = ButterKnife.bind(this);
         initView();
 
         initSlidingView();
 
         initData();
 
-        setViewClickListeners(R.id.tv_home, R.id.tv_second, R.id.tv_third, R.id.tv_userCenter,
+        setViewClickListeners(R.id.tv_home, R.id.tv_second, R.id.tv_girl, R.id.tv_userCenter,
                 R.id.sliding_tv_dayNight, R.id.sliding_tv_setting);
     }
 
     private void initView() {
-        mHomeTextView = (TextView) findViewById(R.id.tv_home);
-        mSecondTextView = (TextView) findViewById(R.id.tv_second);
-        mThirdTextView = (TextView) findViewById(R.id.tv_third);
-        mUserCenterTextView = (TextView) findViewById(R.id.tv_userCenter);
         tabs[0] = mHomeTextView;
         tabs[1] = mSecondTextView;
         tabs[2] = mThirdTextView;
         tabs[3] = mUserCenterTextView;
 
-        mViewPager = (ViewPager) findViewById(R.id.viewPager);
         mViewPager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
@@ -97,7 +100,6 @@ public class MainActivity extends BaseActivity {
     private void initSlidingView() {
         mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
 
-        mSlidingImage = (SimpleDraweeView) findViewById(R.id.sliding_sdv_myPhoto);
         mSlidingImage.setImageURI(Uri.parse(GlobalConstants.GLOBAL_URL.PHOTO_URL));
 
     }
@@ -105,7 +107,7 @@ public class MainActivity extends BaseActivity {
     private void initData() {
         fragments.add(new HomeFragment());
         fragments.add(new SecondFragment());
-        fragments.add(new ThirdFragment());
+        fragments.add(new GirlFragment());
         fragments.add(new UserCenterFragment());
         adapter = new MyViewAdapter(getSupportFragmentManager());
         mViewPager.setAdapter(adapter);
@@ -121,7 +123,7 @@ public class MainActivity extends BaseActivity {
             case R.id.tv_second:
                 changeStatus(1);
                 break;
-            case R.id.tv_third:
+            case R.id.tv_girl:
                 changeStatus(2);
                 break;
             case R.id.tv_userCenter:
@@ -169,4 +171,11 @@ public class MainActivity extends BaseActivity {
         }
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if (unbinder != null) {
+            unbinder.unbind();
+        }
+    }
 }
