@@ -1,10 +1,12 @@
 package com.caiyi.mycalendar.compant;
 
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.view.Gravity;
@@ -13,6 +15,7 @@ import android.widget.TextView;
 
 import com.caiyi.mycalendar.R;
 import com.caiyi.mycalendar.Utils.GlobalConstants;
+import com.caiyi.mycalendar.Utils.UltimateBar;
 import com.caiyi.mycalendar.base.BaseActivity;
 import com.caiyi.mycalendar.fragment.HomeFragment;
 import com.caiyi.mycalendar.fragment.SecondFragment;
@@ -72,6 +75,8 @@ public class MainActivity extends BaseActivity {
     }
 
     private void initView() {
+        UltimateBar ultimateBar = new UltimateBar(this);
+        ultimateBar.setImmersionBar();
         tabs[0] = mHomeTextView;
         tabs[1] = mSecondTextView;
         tabs[2] = mThirdTextView;
