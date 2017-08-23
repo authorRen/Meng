@@ -34,6 +34,8 @@
         <activity android:name=".compant.MeiziMessageActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"/>
+        <activity android:name=".compant.ScrawlActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

@@ -53,10 +53,10 @@
             android:text="分享APP"/>
 
         <TextView
-            android:id="@+id/tv_recommendation"
+            android:id="@+id/tv_scrawl"
             style="@style/slidingItemStyle"
             android:drawableLeft="@drawable/icon_recommendation"
-            android:text="精品推荐"/>
+            android:text="涂鸦"/>
 
         <TextView
             android:id="@+id/tv_user_center_more"

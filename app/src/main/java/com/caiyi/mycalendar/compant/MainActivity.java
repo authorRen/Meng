@@ -71,7 +71,7 @@ public class MainActivity extends BaseActivity {
         initData();
 
         setViewClickListeners(R.id.tv_home, R.id.tv_second, R.id.tv_girl, R.id.tv_userCenter,
-                R.id.sliding_tv_dayNight, R.id.sliding_tv_setting);
+                R.id.sliding_tv_dayNight, R.id.sliding_tv_setting, R.id.tv_scrawl);
     }
 
     private void initView() {
@@ -139,6 +139,9 @@ public class MainActivity extends BaseActivity {
                 mViewPager.setCurrentItem(3);
                 break;
             case R.id.sliding_tv_dayNight:
+                break;
+            case R.id.tv_scrawl:
+                openActivity(ScrawlActivity.class);
                 break;
             default:
                 break;
