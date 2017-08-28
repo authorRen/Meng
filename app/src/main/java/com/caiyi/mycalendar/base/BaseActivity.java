@@ -228,20 +228,6 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
      *            Context.
      */
     public static void quitApp(Context context) {
-        // if (isAppInForeground()) {
-        // AlarmManager alarmManager =
-        // (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-        // Intent intent = new Intent(BaseActivity.ACTION_ALARM_DING_CALLBACK);
-        // PendingIntent mPintent =
-        // PendingIntent.getBroadcast(context.getApplicationContext(), 0,
-        // intent, 0);
-        // final int delayTime = 2000;
-        // //用AlarmManager延迟2秒发送通知，以免进程过早被杀死导致广播无法收到。
-        // alarmManager.set(AlarmManager.RTC, System.currentTimeMillis() +
-        // delayTime, mPintent);
-        // }
-
-        // android.os.Process.killProcess(android.os.Process.myPid());
     }
 
     /**
@@ -417,25 +403,6 @@ public class BaseActivity extends AppCompatActivity implements View.OnClickListe
     protected void openActivity(Class<? extends Activity> cls) {
         Intent intent = new Intent(this, cls);
         startActivity(intent);
-    }
-
-    protected void openActivityWithFinish(Class<? extends Activity> cls) {
-        Intent intent = new Intent(this, cls);
-        startActivity(intent);
-        finish();
-    }
-
-    protected void backResultActivity() {
-        Intent intent = new Intent();
-        setResult(RESULT_OK, intent);
-        finish();
-    }
-
-    protected void backResultActivity(Bundle extras) {
-        Intent intent = new Intent();
-        intent.putExtras(extras);
-        setResult(RESULT_OK, intent);
-        finish();
     }
 
     /**

@@ -36,6 +36,9 @@
             android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".compant.ScrawlActivity"
             android:screenOrientation="portrait" />
+        <activity android:name=".compant.SettingActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
     </application>
 
